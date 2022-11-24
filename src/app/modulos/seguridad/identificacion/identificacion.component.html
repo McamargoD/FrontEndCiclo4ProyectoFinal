@@ -1,0 +1,42 @@
+<div class="center-aling col s4">
+    <footer class="center-aling" class="container">
+        <div class="row" class="card-panel blue darken-1 col s3 center-aling">
+            <div class="col s3 l3 offset-l3 center-aling">
+                <h5 class="card-title center-aling container"><i
+                        class="material-icons prefix center-aling">assignment_ind</i>Ingreso Usuarios</h5>
+                <br>
+                <div class="card grey lighten-3">
+                    <div class="card content">
+
+                        <form class="col s3" class="container" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+                            <div class="row">
+
+                                <div class="row center-aling">
+                                    <div class="input-field col s8">
+                                        <i class="material-icons prefix">email</i>
+                                        <input formControlName="Usuario" id="email" type="email" class="validate">
+                                        <label for="email">Correo</label>
+                                    </div>
+                                </div>
+                                <div class="row center-aling">
+                                    <div class="input-field col s8">
+                                        <i class="material-icons prefix">vpn_key</i>
+                                        <input formControlName="Clave" id="password" type="password" class="validate">
+                                        <label for="password">Contraseña</label>
+                                    </div>
+                                </div>
+
+                                <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light center-aling indigo darken-4" type="submit"
+                                    name="action">Ingresar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                                <br>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

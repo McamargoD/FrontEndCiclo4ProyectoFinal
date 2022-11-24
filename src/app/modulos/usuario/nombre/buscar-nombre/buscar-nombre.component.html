@@ -1,0 +1,65 @@
+<a routerLink="/usuario/crear-nombre" class="btn">Nuevo Usuario</a>
+
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Cedula
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Correo
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Rol
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.cedula}}
+            </td>
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.apellido}}
+            </td>
+            <td>
+                {{p.correo}}
+            </td>
+            <td>
+                {{p.telefono}}
+            </td>
+            <td>
+                {{p.rol}}
+            </td>
+            <td>
+                {{p.contrasena}}
+            </td>
+            <td>
+                <a routerLink="/usuario/editar-nombre/{{p.id}}">Editar</a>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+
+
+</table>
